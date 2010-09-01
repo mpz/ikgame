@@ -1,0 +1,44 @@
+Ikariam
+=======
+
+Ruby plugin for simple game actions on Ikariam game
+(http://ikariam.com, web browser game)
+
+
+Features:
+-Logins to Ikariam's site
+-Gets the resource quantities for capital
+-Upgrade and build Buildings
+-Knowledges
+-Set workers, scientists
+-Get finished build time
+
+Developed for education only. Just for fun.
+
+Example
+=======
+
+    player = Ikariam::Accaunt.new
+    player.login = "my_login"
+    player.password = "my_password"
+
+	player.login_to_game
+	
+	player.research("Шкив")
+
+	player.capital.build(3, "Академия")
+	player.capital.upgrade_building(3)
+	
+	player.capital.get_build_time
+	
+	player.capital.set_scientists(3, 16)
+	player.capital.set_wood_workers(95)
+	
+	player.capital.donate_wood(400)
+	
+	# get forum messages
+	player.capital.get_forum_msg
+
+	
+	
+Copyright (c) 2010 [Mikhail Pozdnyakov], released under the MIT license
